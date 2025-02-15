@@ -12,25 +12,27 @@ public class User {
     @Column(name = "student_id")
     private Long id;
 
-    private Long studentName;
+    private String name; //학생 이름
 
-    private String instagramId;
+    private int studentNumber; //학번
 
-    private int age;
+    private String instagramId; //인스타id
 
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
-
-    @Enumerated(EnumType.STRING)
-    private Department department;
+    private int age; //나이
 
     @Enumerated(EnumType.STRING)
-    private Mbti mbti;
+    private Gender gender; //성별
 
     @Enumerated(EnumType.STRING)
-    private SelectGender selectGender;
+    private Department department; //학과
 
-    private String bio;
+    @Enumerated(EnumType.STRING)
+    private Mbti mbti; //mbti
+
+    @Enumerated(EnumType.STRING)
+    private SelectGender selectGender; //뽑고싶은 성별
+
+    private String bio; // 한줄소개
 
     //짝궁 관계 OneToOne관계 사용
     /**

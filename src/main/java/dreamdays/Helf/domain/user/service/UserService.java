@@ -35,9 +35,12 @@ public class UserService {
      * 이름과 학번으로 회원 조회
      */
     public CheckInfoResponse findByNameAndStudentNumber(String name, int studentNumber) {
-//        return userRepository.findByNameAndStudentNumber(name, studentNumber)
         User user = userRepository.findByNameAndStudentNumber(name, studentNumber)
                 .orElseThrow(() -> new UserNotFoundException("해당 학번과 이름을 가진 사용자가 존재하지 않습니다."));
+
+        if (user.isDraw()) {
+            throw new IllegalStateException("이미 뽑기를 진행한 사용자입니다.");
+        }
         return CheckInfoResponse.from(user);
     }
 }

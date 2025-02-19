@@ -15,15 +15,13 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("/create-info")
+    @PostMapping("/users/create-info")
     public ResponseEntity<String> postInfoUser(@RequestBody InfoRequest infoRequest) {
-        //UserEntity가 기본적으로 Protect여서 toEntity()를 만들지 못한다...
-        //@Bliuder 사용해서 만들었는데 해결 됐을까요..?
         userService.saveUser(infoRequest);
         return ResponseEntity.ok("정보 입력 완료");
     }
 
-    @GetMapping("/check-info")
+    @GetMapping("/users/check-info")
     public ResponseEntity<CheckInfoResponse> getCheckUser(
             @RequestParam String name,
             @RequestParam int studentNumber

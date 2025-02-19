@@ -3,7 +3,6 @@ package dreamdays.Helf.domain.user.entity;
 import dreamdays.Helf.domain.user.entity.enums.Department;
 import dreamdays.Helf.domain.user.entity.enums.Gender;
 import dreamdays.Helf.domain.user.entity.enums.Mbti;
-import dreamdays.Helf.domain.user.entity.enums.SelectGender;
 import jakarta.persistence.*;
 import lombok.*;
 

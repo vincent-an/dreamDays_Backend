@@ -5,7 +5,6 @@ import dreamdays.Helf.domain.draw.repository.DrawRepository;
 import dreamdays.Helf.domain.user.dto.CheckInfoResponse;
 import dreamdays.Helf.domain.user.entity.User;
 import dreamdays.Helf.domain.user.entity.enums.Gender;
-import dreamdays.Helf.domain.user.entity.enums.SelectGender;
 import dreamdays.Helf.domain.user.repository.UserRepository;
 import dreamdays.Helf.domain.user.service.UserService;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
-package dreamdays.helf.domain.service;
-import dreamdays.helf.domain.Entity.enums.User;
-import dreamdays.helf.domain.repository.UserRepository;
+package dreamdays.helf.domain.user.service;
+import dreamdays.helf.domain.user.entity.User;
+import dreamdays.helf.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

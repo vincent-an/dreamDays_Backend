@@ -1,4 +1,7 @@
-package dreamdays.helf.domain.Entity.enums;
+package dreamdays.helf.domain.user.entity;
+import dreamdays.helf.domain.user.entity.enums.Department;
+import dreamdays.helf.domain.user.entity.enums.Gender;
+import dreamdays.helf.domain.user.entity.enums.Mbti;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -6,6 +9,9 @@ import lombok.*;
 @Getter @Setter
 @Table(name = "User")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+@AllArgsConstructor
+
 public class User {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

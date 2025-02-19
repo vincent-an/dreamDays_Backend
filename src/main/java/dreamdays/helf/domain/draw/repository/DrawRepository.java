@@ -1,7 +1,7 @@
-package dreamdays.helf.domain.repository;
+package dreamdays.helf.domain.draw.repository;
 
-import dreamdays.helf.domain.Entity.enums.Gender;
-import dreamdays.helf.domain.Entity.enums.User;
+import dreamdays.helf.domain.user.entity.enums.Gender;
+import dreamdays.helf.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

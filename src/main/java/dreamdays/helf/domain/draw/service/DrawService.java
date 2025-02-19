@@ -1,14 +1,16 @@
-package dreamdays.helf.domain.service;
+package dreamdays.helf.domain.draw.service;
 
-import dreamdays.helf.domain.Entity.enums.Gender;
-import dreamdays.helf.domain.Entity.enums.User;
-import dreamdays.helf.domain.repository.DrawRepository;
+import dreamdays.helf.domain.draw.dto.DrawResponse;
+import dreamdays.helf.domain.user.entity.enums.Gender;
+import dreamdays.helf.domain.user.entity.User;
+import dreamdays.helf.domain.draw.repository.DrawRepository;
+import dreamdays.helf.domain.user.repository.UserRepository;
+import dreamdays.helf.domain.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -18,6 +20,8 @@ import java.util.stream.Collectors;
 public class DrawService {
 
     private final DrawRepository drawRepository;
+    private final UserRepository userRepository;
+    private final UserService userService;
     private final Random random = new Random();
 
     // 특정 성별 유저 중 랜덤 뽑기 (뽑을 수 있는 사람이 없어도 명단에서 다시 뽑기)
@@ -29,7 +33,8 @@ public class DrawService {
     @Transactional
     public User drawRandomUser(String name, int studentNumber) {
         //뽑는 유저 조회
-        User user = UserService.findByNameAndStudentNumber(name, studentNumber);
+       User user = UserService.findByNameAndStudentNumber(name, studentNumber);
+        //UserService.findByNameAndStudentNumber(name, studentNumber);
 
         //뽑고싶은 성별에 맞는 유저 리스트 조회
         List<User> availableUsers = findByGender(user.getSelectGender());
@@ -61,7 +66,7 @@ public class DrawService {
         user.setDraw(true);
         drawnUser.setPicked(true);
 
-        return drawnUser;
+     return drawnUser; //return DrawResponse.from(drawnUser)
     }
 
     private User selectRandomUser(List<User> users) {

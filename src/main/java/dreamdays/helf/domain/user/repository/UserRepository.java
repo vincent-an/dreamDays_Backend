@@ -1,5 +1,5 @@
-package dreamdays.helf.domain.repository;
-import dreamdays.helf.domain.Entity.enums.User;
+package dreamdays.helf.domain.user.repository;
+import dreamdays.helf.domain.user.entity.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;

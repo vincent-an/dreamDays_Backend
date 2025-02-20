@@ -1,4 +1,4 @@
-package dreamdays.helf;
+package dreamdays.Helf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

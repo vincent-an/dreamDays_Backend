@@ -1,7 +1,7 @@
-package dreamdays.helf.domain.user.entity;
-import dreamdays.helf.domain.user.entity.enums.Department;
-import dreamdays.helf.domain.user.entity.enums.Gender;
-import dreamdays.helf.domain.user.entity.enums.Mbti;
+package dreamdays.Helf.domain.user.entity;
+import dreamdays.Helf.domain.user.entity.enums.Department;
+import dreamdays.Helf.domain.user.entity.enums.Gender;
+import dreamdays.Helf.domain.user.entity.enums.Mbti;
 import jakarta.persistence.*;
 import lombok.*;
 

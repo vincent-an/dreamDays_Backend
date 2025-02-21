@@ -15,8 +15,11 @@ public class CorsConfig {
     public CorsConfigurationSource corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOriginPatterns(List.of(
-                "http://localhost:3000" //리액트 로컬
-//                "https://mingle-mu.vercel.app/" //프론트배포를 하면 그 도메인을 넣으면 됨
+                //리액트 로컬
+                "http://localhost:3000",
+                //프론트배포를 하면 그 도메인을 넣으면 됨
+                "https://eulji-hf.netlify.app"
+//                "http://127.0.0.1:5500"
         ));
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");

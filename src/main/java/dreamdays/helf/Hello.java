@@ -1,4 +1,4 @@
-package dreamdays.Helf;
+package dreamdays.helf;
 
 public class Hello {
 }

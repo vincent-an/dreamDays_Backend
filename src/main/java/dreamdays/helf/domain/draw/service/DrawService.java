@@ -1,5 +1,4 @@
 package dreamdays.Helf.domain.draw.service;
-
 import dreamdays.Helf.domain.draw.dto.DrawResponse;
 import dreamdays.Helf.domain.draw.repository.DrawRepository;
 import dreamdays.Helf.domain.user.dto.CheckInfoResponse;

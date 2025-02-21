@@ -1,4 +1,4 @@
-package dreamdays.Helf;
+package dreamdays.helf;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -18,8 +18,7 @@ public class CorsConfig {
         // 클라이언트의 origin(도메인) 추가
         config.setAllowedOriginPatterns(List.of(
                 "http://localhost:3000",          // 로컬 환경 (예: React 로컬 개발 서버)
-                "https://eulji-hf.netlify.app",   // 배포된 프론트엔드 URL
-                "http://127.0.0.1:5500"           // 다른 로컬 환경
+                "https://eulji-hf.netlify.app"   // 배포된 프론트엔드 URL
         ));
 
         // 모든 HTTP 메서드 허용 (GET, POST, PUT 등)
@@ -27,6 +26,9 @@ public class CorsConfig {
 
         // 모든 요청 헤더 허용
         config.addAllowedHeader("*");
+
+        // 'Content-Type'을 허용하는 헤더 추가
+        config.addAllowedHeader("Content-Type");
 
         // 특정 응답 헤더를 클라이언트로 전달하도록 설정
         config.addExposedHeader("Set-Cookie");

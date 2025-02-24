@@ -48,6 +48,7 @@ public class DrawService {
 
         // 1. picked가 false인 사람들 중에서 뽑기
         List<User> notPickedUsers = availableUsers.stream()
+                .filter(u -> !u.equals(user))
                 .filter(u -> !u.isPicked())
                 .collect(Collectors.toList());
 
